@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тени былого</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Georgia', serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(245, 241, 231, 0.8);
+            backdrop-filter: blur(2px);
+            z-index: 1;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 2s ease forwards;
+            z-index: 2;
+            position: relative;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #4b4b4b;
+            animation: fadeInUp 2s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 2s ease forwards;
+            animation-delay: 1s;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 2s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="images/photo.jpg" alt="Она смотрит на Россию">
+    <h1>Тени былого</h1>
+    <p>Она сидит на корточках, осуждающим взглядом охватывая Россию — ту, что потерялась между вечной тоской и неумирающей надеждой. В её глазах — история земли, голос которой почти замолк, но ещё не забыт.</p>
+</div>
+
+<footer>
+    &copy; 2025 Тени России
+</footer>
+
+</body>
+</html>
